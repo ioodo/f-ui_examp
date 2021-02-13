@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<navbar extClass="navbar" title="辅导员认证申请" subTitle="这个是子标题" bindback="onBack">
+    <view slot="back">
+      <text
+        class="f-navbar-title"
+      >返回</text>
+    </view>
+    <view slot="right" style="border-radius: 50%;background: red;display: block;">
+    </view>
+  </navbar>
+  <image src="{{ img }}"
+    style="position: fixed;top: 0;z-index: -1;"></image>
+  <view style="height: 200px; border: 1px solid red;overflow: hidden;">
+    <!-- <view>123</view> -->
+    <pulltorefresh-view style="height:100%;" nomore="{{nomore}}" refreshing="{{refreshing}}" bindpulldownrefresh="refreshData" bindloadmore="loadmoreData">
+      <view class="list-item" wx:for="{{colors}}" wx:for-index="index" wx:key="index" style="background: {{item}}">{{index + 1}}. {{item}}</view>
+    </pulltorefresh-view>
+  </view>
+  <!--
+  <scroll-view scroll-y="true" style="height: 200px;border: 1px solid red;">
+    <view >
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+      <view class="usermotto" style="height: 400px;">
+        <text class="user-motto">{{motto}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  -->
+<view></view>

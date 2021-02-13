@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navbar": "/components/navbar/index",
+    "pulltorefresh-view": "/components/wx-pulltorefresh-view/wx-pulltorefresh-view",
+    "page-layout": "/components/page-layout/index",
+    "f-icon": "/components/iconfont/index"
+  }
+}

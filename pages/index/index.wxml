@@ -1,0 +1,102 @@
+<page-layout
+  id="pageLayout"
+  navbar="{{ pageLayout.navbar }}"
+  background-image="{{ pageLayout.backgroundImage }}"
+  bindback="onBack"
+  disablePullDownRefresh="{{ false }}"
+  bindrefresh="onPullRefresh">
+  <view
+    slot="right"
+    class="search-icon"
+    style="width: {{ searchIconHeight }}px; height: {{searchIconHeight}}px;"
+  >
+    <view
+      class="search-icon-bg">
+    </view>
+    <f-icon
+        name="search"
+        size="{{ searchIconHeight * 0.6}}"
+        unit="px"
+        color="#ffffff"
+        bindtap="handleSearch"
+      ></f-icon>
+  </view>
+  <view slot="extraContent" class="navbar-extra-wrapper">
+    <view class="navbar-extra-wrapper__left">
+      <view class="extra-title">
+        我的故事
+      </view>
+      <view class="extra-subtitle">
+        <text class="my-story-subtitle-text">故事集</text>
+        <view class="title-after">
+        </view>
+      </view>
+    </view>
+    <view class="navbar-extra-wrapper__right">
+      <f-icon
+        name="add-fill"
+        size="{{ buttonAddStoryHeight }}"
+        unit="px"
+        color="#ffffff"
+        bindtap="handleAddStory"
+      ></f-icon>
+    </view>
+  </view>
+  <view slot="pageContent" class="page-content-inner">
+    <f-card>
+      <limit-textarea
+        placeholder="请写出你的故事"
+        value=""
+        limit="500"
+      ></limit-textarea>
+    </f-card>
+    <f-card>
+      <view>
+        <view>
+          <f-button type="pink" text="普通"></f-button>
+          <f-button type="pink" fill="{{true}}" text="填充"></f-button>
+        </view>
+        <view>
+          <f-button
+            size="mini"
+            type="pink"
+            shape="round"
+            icon="add-fill-plus"
+            bindtap="onTap"
+            text="带图标"></f-button>
+        </view>
+        <view>
+          <f-tag
+            size="mini"
+            type="pink"
+            shape="round"
+            text="标签"
+            bindftap="onTap"
+            extra="1"
+            checkable="{{ true }}"
+            checked="{{true}}"
+            extClass="plain"
+            />
+        </view>
+      </view>
+    </f-card>
+    <f-card>
+      <f-row
+        align="middle"
+        justify="start"
+        gutter="{{ [16, 16] }}"
+        wx:for="{{ testSlots }}"
+        wx:key="slot"
+      >
+        <f-col span="1">
+          <view style="background: red;">{{ item }}</view>
+        </f-col>
+        <f-col span="3">
+          <view style="background: red;">{{ item }}</view>
+        </f-col>
+      </f-row>
+    </f-card>
+    <f-card>
+    </f-card>
+  </view>
+</page-layout>

@@ -1,0 +1,58 @@
+/**index.wxss**/
+page {
+  /* height: 100%; */
+}
+
+.search-icon {
+  display: grid;
+  place-items: center;
+}
+.search-icon-bg {
+  position: absolute;
+  background: #ffffff;
+  opacity: 0.3;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.my-story-wrapper {
+  padding: 20rpx 0rpx;
+}
+.my-story-title {
+  color: #ededed;
+  font-size: 24rpx;
+}
+.my-story-subtitle {
+  color: #ffffff;
+  font-size: 44rpx;
+  margin-top: 16rpx;
+  display: flex;
+}
+.my-story-subtitle > .title-after {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-item {
+  height: 100px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

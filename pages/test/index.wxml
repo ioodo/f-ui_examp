@@ -1,0 +1,37 @@
+<page-layout
+  navbar="{{ pageLayout.navbar }}"
+  background-image="{{ pageLayout.backgroundImage }}"
+  bindback="onBack">
+  <view
+    slot="right"
+    class="search-icon"
+    style="width: {{ searchIconHeight }}px; height: {{searchIconHeight}}px;"
+  >
+    <view
+      class="search-icon-bg">
+    </view>
+    <f-icon
+        name="search"
+        size="{{ searchIconHeight * 0.6}}"
+        unit="px"
+        color="#ffffff"
+        bindtap="handleSearch"
+      ></f-icon>
+  </view>
+  <view slot="extraContent" class="my-story-wrapper">
+    <view class="my-story-title">
+      我的故事
+    </view>
+    <view class="my-story-subtitle">
+      <text class="my-story-subtitle-text">故事集</text>
+      <view class="title-after">
+        <f-icon
+          name="add-fill"
+          size="{{ buttonAddStoryHeight }}"
+          unit="px"
+          bindtap="handleAddStory"
+        ></f-icon>
+      </view>
+    </view>
+  </view>
+</page-layout>

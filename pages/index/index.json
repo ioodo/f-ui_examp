@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "navbar": "/components/navbar/index",
+    "pulltorefresh-view": "/components/wx-pulltorefresh-view/wx-pulltorefresh-view",
+    "page-layout": "/components/page-layout/index",
+    "f-icon": "/components/iconfont/index",
+    "f-card": "/components/card/index",
+    "limit-textarea": "/components/limit-textarea/index",
+    "f-button": "/components/button/index",
+    "f-tag": "/components/tag/index",
+    "f-row": "/components/row/index",
+    "f-col": "/components/col/index"
+  }
+}
