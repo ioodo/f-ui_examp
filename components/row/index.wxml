@@ -1,6 +1,6 @@
 <view
   class="f-row {{ alignCls }} {{ justifyCls }}"
-  style=""
+  style="{{ style }}"
 >
   <slot></slot>
 </view>

@@ -22,22 +22,28 @@ Component({
   },
   data : {
     alignCls: '',
-    justifyCls: ''
+    justifyCls: '',
+    style: ''
   },
   observers : {
-    'align': function () {
-      var { align } = this.data;
+    'align': function (align) {
       this.setData({
         alignCls: align ? 'f-row-flex-' + align : ''
       })
     },
-    'justify': function () {
-      var { justify } = this.data;
+    'justify': function (justify) {
       this.setData({
         justifyCls: justify ? 'f-row-flex-' + justify : ''
       })
     },
-    'gutter': function () {
+    'gutter': function (val) {
+      var margin = '';
+      if (val != null && val.length > 0) {
+        margin = val.map(v => (~v + 1)/2 + 'rpx').join(' ')
+      }
+      this.setData({
+        style: margin.length > 0 ? 'margin: ' + margin : ''
+      })
     }
   },
   lifetimes: {
@@ -47,7 +53,6 @@ Component({
   created () {
   },
   attached () {
-    console.log(this.data.gutter)
   },
   methods: {
   }

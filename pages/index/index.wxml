@@ -88,11 +88,11 @@
         wx:for="{{ testSlots }}"
         wx:key="slot"
       >
-        <f-col span="1">
+        <f-col span="1" gutter="{{ [16, 16] }}">
           <view style="background: red;">{{ item }}</view>
         </f-col>
-        <f-col span="3">
-          <view style="background: red;">{{ item }}</view>
+        <f-col span="3" gutter="{{ [16, 16] }}">
+          <view style="background: red;">{{ item }} - 1</view>
         </f-col>
       </f-row>
     </f-card>
