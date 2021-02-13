@@ -1,4 +1,4 @@
-.f-row1 {
+.f-row {
   position: relative;
   height: auto;
   margin-right: 0;
@@ -7,7 +7,7 @@
   display: block;
   box-sizing: border-box;
 }
-.f-row {
+.f-row1 {
   display: flex;
   flex-flow: row wrap;
 }
@@ -37,7 +37,10 @@
 .f-row-flex-space-around {
   justify-content: space-around;
 }
-/* .f-row:before {
+.f-row:before, .f-row:after {
   display: table;
   content: "";
-} */
+}
+.f-row+.f-row:before, .f-row:after {
+  clear: both;
+}

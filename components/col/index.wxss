@@ -6,9 +6,8 @@ f-col {
   min-height: 1px;
 }
 .f-col-1, .f-col-2, .f-col-3, .f-col-4, .f-col-5, .f-col-6 {
-  /* flex: 0 0 auto; */
-  /* float: left; */
-  padding: 0px;
+  flex: 0 0 auto;
+  float: left;
 }
 .f-col-1 {
   display: block;
