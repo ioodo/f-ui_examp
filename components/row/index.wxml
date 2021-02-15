@@ -1,5 +1,5 @@
 <view
-  class="f-row {{ alignCls }} {{ justifyCls }}"
+  class="{{ baseCls }} {{ alignCls }} {{ justifyCls }}"
   style="{{ style }}"
 >
   <slot></slot>

@@ -7,7 +7,7 @@
   display: block;
   box-sizing: border-box;
 }
-.f-row1 {
+.f-row-flex {
   display: flex;
   flex-flow: row wrap;
 }

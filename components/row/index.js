@@ -21,6 +21,7 @@ Component({
     }
   },
   data : {
+    baseCls: 'f-row',
     alignCls: '',
     justifyCls: '',
     style: ''
@@ -33,6 +34,7 @@ Component({
     },
     'justify': function (justify) {
       this.setData({
+        baseCls: justify ? 'f-row-flex' : 'f-row',
         justifyCls: justify ? 'f-row-flex-' + justify : ''
       })
     },
