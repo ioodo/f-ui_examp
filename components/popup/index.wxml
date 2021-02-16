@@ -1,0 +1,10 @@
+<view
+  class="f-popup {{ visible ? 'f-popup-show' : ''}}"
+  bindtap="onPopupTap"
+>
+  <view
+    class="f-popup-content {{ contentClassName }}"
+  >
+    <slot></slot>
+  </view>
+</view>

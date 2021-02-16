@@ -53,7 +53,7 @@
     <f-card>
       <view>
         <view>
-          <f-button type="pink" text="普通"></f-button>
+          <f-button type="pink" text="普通" bindftap="showDatetimePicker"></f-button>
           <f-button type="pink" fill="{{true}}" text="填充"></f-button>
         </view>
         <view>
@@ -105,3 +105,10 @@
     </f-toolbar>
   </view>
 </page-layout>
+<f-popup
+  visible="{{ datetimePickerVisible }}"
+  bind:overlayTap="hidePopup"
+  position="center"
+>
+  <view>123456</view>
+</f-popup>

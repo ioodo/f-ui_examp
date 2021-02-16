@@ -10,6 +10,7 @@
     "f-tag": "/components/tag/index",
     "f-row": "/components/row/index",
     "f-col": "/components/col/index",
-    "f-toolbar": "/components/toolbar/index"
+    "f-toolbar": "/components/toolbar/index",
+    "f-popup": "/components/popup/index"
   }
 }

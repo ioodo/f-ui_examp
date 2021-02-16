@@ -25,7 +25,8 @@ Page({
     },
     testSlots: [
       '1', '2'
-    ]
+    ],
+    datetimePickerVisible: false
   },
   // 事件处理函数
   bindViewTap() {
@@ -143,5 +144,15 @@ Page({
   onTap (e) {
     console.log('---- button tap')
     console.log(e)
+  },
+  showDatetimePicker () {
+    this.setData({
+      datetimePickerVisible: true
+    })
+  },
+  hidePopup () {
+    this.setData({
+      datetimePickerVisible: false
+    })
   }
 })
