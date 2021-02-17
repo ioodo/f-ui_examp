@@ -3,7 +3,7 @@
   bindtap="onPopupTap"
 >
   <view
-    class="f-popup-content {{ contentClassName }}"
+    class="f-popup-content {{ contentClass }} {{ contentClassName }}"
   >
     <slot></slot>
   </view>

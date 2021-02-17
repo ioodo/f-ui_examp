@@ -103,12 +103,56 @@
     <f-toolbar>
       <view slot="left">左侧按钮</view>
     </f-toolbar>
+    <f-picker
+      columns="{{ pickerColumns }}"
+      visible="{{ datetimePickerVisible }}"
+      bind:overlayTap="hidePopup"
+      bind:change="handlePickerChange"
+    >
+      <!-- <view slot="toolbar">123</view> -->
+      <!-- <f-toolbar>
+        <view slot="left">左侧按钮</view>
+      </f-toolbar> -->
+      <view slot="content">
+        <!-- <picker-view
+          style="height: 500rpx;border: 1px solid red; background: #fff;"
+          bindpickstart="handlePickStart"
+          bindpickend="handlepickend"
+          value="{{ pickerValue }}"
+          bindchange="bindchange">
+          <picker-view-column bindscroll="handlescroll2" class="picker-col">
+            <f-row
+              class="col-view"
+              wx:for="{{ testSlots }}"
+              wx:key="i"
+              style="transform: scale({{ 1 - 0.1*(pickerValue[0] - index)}});text-align: center;line-height: 34px;">
+              <f-col justify="center">
+                <text>{{ item }}</text>
+              </f-col>
+            </f-row>
+          </picker-view-column>
+          <picker-view-column bindscroll="handlescroll2" class="picker-col">
+            <f-row
+              class="col-view"
+              wx:for="{{ testSlots }}"
+              wx:key="i"
+              style="text-align: center;line-height: 34px;">
+              <f-col justify="center">
+                <view style="transform: scale({{ 1 - 0.1*(pickerValue[0] - index)}});">{{ item }}</view>
+              </f-col>
+            </f-row>
+          </picker-view-column>
+        </picker-view> -->
+      </view>
+    </f-picker>
   </view>
 </page-layout>
-<f-popup
+<!-- <f-popup
   visible="{{ datetimePickerVisible }}"
   bind:overlayTap="hidePopup"
-  position="center"
+  position="bottom"
 >
-  <view>123456</view>
-</f-popup>
+  <f-toolbar>
+    <view slot="left">左侧按钮</view>
+  </f-toolbar>
+</f-popup> -->

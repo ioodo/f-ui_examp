@@ -8,9 +8,6 @@ Component({
     styleIsolation: 'shared'
   },
   properties: {
-    contentClass: {
-      type: String
-    },
     visible: {
       type: Boolean,
       value: false
@@ -18,18 +15,25 @@ Component({
     position: {
       type: String,
       value: 'center'
+    },
+    toolbar: {
+      type: Boolean,
+      value: true
+    },
+    columns: {
+      type: Array,
+      value: []
+    },
+    value: {
+      type: Array,
+      value: []
     }
   },
   data : {
     contentClassName: ''
   },
   observers : {
-    'visible': function () {
-      this.setClassName()
-    },
-    'position': function () {
-      this.setClassName()
-    }
+    
   },
   lifetimes: {
     ready: function () {
@@ -40,16 +44,12 @@ Component({
   attached () {
   },
   methods: {
-    onPopupTap () {
-      this.triggerEvent('overlayTap')
-    },
-    setClassName () {
-      var cls = [];
-      cls.push('f-popup-content-' + this.data.position);
-      if (this.data.visible)
-        cls.push('f-popup-content-show');
+    handleChange (e) {
       this.setData({
-        contentClassName: cls.join(' ')
+        value: e.detail.value
+      })
+      this.triggerEvent('change', {
+        ...(e.detail)
       })
     }
   }

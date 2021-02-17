@@ -6,7 +6,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 900;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
@@ -19,8 +19,8 @@
   max-height: 100%;
   box-sizing: border-box;
   background: #f7f7f7;
-  transform-origin: center;
-  transition: all 0.3s ease-in-out;
+  /* transform-origin: center;
+  transition: all 0.2s ease-in-out; */
   z-index: 900;
   visibility: hidden;
 }
@@ -36,7 +36,7 @@
   bottom: 0;
   transform: translate3d(0, 100%, 0);
   transform-origin: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .f-popup-content-show {

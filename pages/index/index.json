@@ -11,6 +11,7 @@
     "f-row": "/components/row/index",
     "f-col": "/components/col/index",
     "f-toolbar": "/components/toolbar/index",
-    "f-popup": "/components/popup/index"
+    "f-popup": "/components/popup/index",
+    "f-picker": "/components/picker/index"
   }
 }
